@@ -41,16 +41,18 @@
         <input type="submit" value="Send Message" />
       </div>
     </form>
+  </div>
     {{message}}
     <section class="bangers">
       <h2>What is your favorite Amy Winehouse song?</h2>
-      <div><p>Add a new song</p><a href=""><i class="fa-solid fa-plus"></i></a></div>
+      <div><h3>Add a new song <a href="/admin/newsletter/add"><i class="fa-solid fa-plus"></i></h3></a></div>
       <table class="songs">
         <thead>
           <tr>
             <th>#</th>
             <th>Title</th>
             <th>Why?</th>
+            <th><i class="fa-solid fa-plus-minus"></i></th>
           </tr>
         </thead>
         <tbody>
@@ -58,7 +60,8 @@
           <tr>
             <th>{{id}}</th>
             <td>{{title}}</td>
-            <td><a href=""><i class="fa-solid fa-pen-to-square"></i></a><a href=""><i class="fa-regular fa-square-minus"></i></a></td>
+            <td>{{reason}}</td>
+            <td><a href="/admin/newsletter/update/{{id}}"><i class="fa-solid fa-pen-to-square"></i></a> <a href="/admin/newsletter/delete/{{id}}"><i class="fa-regular fa-square-minus"></i></a></td>
           </tr>
           {{/each}}
         </tbody>

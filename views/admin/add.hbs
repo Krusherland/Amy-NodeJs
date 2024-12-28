@@ -1,0 +1,31 @@
+<section class="add">
+  <div class="contactInfo">
+    <div>
+      <p>Add a new song</p>
+    </div>
+    <form action="/admin/newsletter/add" method="post">
+      <div>
+        <input
+          type="text"
+          placeholder="Enter the name"
+          id="title"
+          name="title"
+        />
+      </div>
+      <small id="nameError" class="errorMessage">The name you entered is
+        incorrect.</small>
+      <div>
+        <input
+          type="text"
+          placeholder="Why do you like it?"
+          id="reason"
+          name="reason"
+        />
+      </div>
+      <small id="emailError" class="errorMessage">The reason you entered is
+        incorrect.</small><div>
+        <input type="submit" value="Add" />
+      </div>
+    </form>
+  </div>
+</section>

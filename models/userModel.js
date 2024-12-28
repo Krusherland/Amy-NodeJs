@@ -1,5 +1,5 @@
-var pool = require('./dataBase');
-var md5 = require('md5');
+var pool = require("./dataBase");
+var md5 = require("md5");
 
 async function getUserAndPassword(user, password) {
   try {
@@ -11,4 +11,4 @@ async function getUserAndPassword(user, password) {
   }
 }
 
-module.exports = {getUserAndPassword};
+module.exports = { getUserAndPassword };

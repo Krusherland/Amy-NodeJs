@@ -12,7 +12,6 @@
 
 body {
   background-color: black;
-  
 }
 header {
   height: 70px;
@@ -106,18 +105,23 @@ a:hover {
 .musicHead {
   background-image: url(../images/Amy\ Winehouse\ 16.jpg);
 }
-.contactHead {
+.contactHead,
+.add,
+.modify {
   background-image: url(../images/Amy\ Winehouse\ 13.jpg);
   height: 400px !important;
 }
 .storeHead {
   height: 100px;
 }
+.songs {
+  background-color: azure;
+}
 
 .head,
 .artistHead,
-.musicHead, 
-.contactHead{
+.musicHead,
+.contactHead {
   height: 650px;
   background-size: cover;
   background-position: center;
@@ -140,8 +144,7 @@ h3 {
 .musicDiscography,
 .Acknowledgments,
 .products,
-.contact,
-.bangers {
+.contact {
   font-family: "Limelight", sans-serif;
   font-size: 25px;
   margin-top: 70px;
@@ -154,9 +157,27 @@ h3 {
 }
 
 .bangers {
+  font-family: "Limelight", sans-serif;
+  font-size: 30px;
+  padding: 100px;
   gap: 50px;
-  h2, i {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.songs {
+  font-family: "Metal", serif;
+  font-size: 40px;
+  th,
+  td,
+  i {
+    text-align: center;
     color: black;
+  }
+  th {
+    border: 3px solid black;
   }
 }
 .item {
@@ -354,15 +375,17 @@ small {
   text-align: center;
 }
 .contactForm {
-  padding-top: 100px;
+  padding-top: 80px;
+  padding-bottom: 80px;
   p {
     color: black;
   }
 }
-.CartTicket, .contactForm {
+.CartTicket,
+.contactForm {
   background-image: url(../images/Amy\ Winehouse\ 12.jpg);
   font-family: "Limelight", sans-serif;
-  font-size: 30px;  
+  font-size: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -374,14 +397,16 @@ small {
     color: black;
   }
 
-  tr:nth-child(even){background-color: #f2f2f2}
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
 
   th {
-  background-color: #000000;
-  border-radius: 10%;
-  padding: 4px;
-  color: white;
-  font-size: 50px;
+    background-color: #000000;
+    border-radius: 10%;
+    padding: 4px;
+    color: white;
+    font-size: 50px;
   }
 
   .Cart {
@@ -394,16 +419,16 @@ small {
     align-content: space-between;
     td {
       padding: 20px;
-      background-color: whitesmoke
+      background-color: whitesmoke;
     }
   }
 }
 .CartTicket {
-    padding-top: 100px;
-    padding-bottom: 20px;
-    h1 {
-      margin-top: 50px;
-    }
+  padding-top: 100px;
+  padding-bottom: 20px;
+  h1 {
+    margin-top: 50px;
+  }
 }
 #totalTicket {
   margin: 10px;
@@ -417,6 +442,12 @@ small {
   border-radius: 10px;
 }
 
+.add, .modify {
+  padding: 100px;
+  p {
+    font-size: 40px;
+  }
+}
 .buy {
   margin: 10px;
   padding: 8px;

@@ -1,0 +1,34 @@
+<section class="modify">
+  <div class="contactInfo">
+    <div>
+      <p>Modify the song</p>
+    </div>
+    <form action="/admin/newsletter/update" method="post">
+    <input type="hidden" value="{{banger.id}}" name="id">
+      <div>
+        <input
+          type="text"
+          placeholder="Enter the name"
+          id="title"
+          name="title"
+          value="{{banger.title}}"
+        />
+      </div>
+      <small id="nameError" class="errorMessage">The name you entered is
+        incorrect.</small>
+      <div>
+        <input
+          type="text"
+          placeholder="Why do you like it?"
+          id="reason"
+          name="reason"
+          value="{{banger.reason}}"
+        />
+      </div>
+      <small id="emailError" class="errorMessage">The reason you entered is
+        incorrect.</small><div>
+        <input type="submit" value="update" />
+      </div>
+    </form>
+  </div>
+</section>
