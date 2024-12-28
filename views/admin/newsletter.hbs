@@ -1,0 +1,68 @@
+<main>
+  <section class="logout">
+    <p><span>Hello {{user}}!</span>
+      <a href="/admin/login/logout">Log out
+        <i class="fa-solid fa-rectangle-xmark"></i></a></p>
+  </section>
+  <div class="contactForm">
+    <p>Send us your messages!</p>
+    <p></p>
+    <form action="/admin/newsletter" method="post" id="contactMessage">
+      <div>
+        <input
+          type="text"
+          placeholder="Enter your name"
+          id="name"
+          name="name"
+        />
+      </div>
+      <small id="nameError" class="errorMessage">The name you entered is
+        invalid.</small>
+      <div>
+        <input
+          type="email"
+          placeholder="Enter your email"
+          id="email"
+          name="email"
+        />
+      </div>
+      <small id="emailError" class="errorMessage">The email you entered is
+        invalid.</small>
+      <div>
+        <input
+          type="text"
+          placeholder="Write your message"
+          id="message"
+          name="message"
+        />
+      </div>
+      <small id="messageError" class="errorMessage">The message is too short.</small>
+      <div>
+        <input type="submit" value="Send Message" />
+      </div>
+    </form>
+    {{message}}
+    <section class="bangers">
+      <h2>What is your favorite Amy Winehouse song?</h2>
+      <div><p>Add a new song</p><a href=""><i class="fa-solid fa-plus"></i></a></div>
+      <table class="songs">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Why?</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each bangers}}
+          <tr>
+            <th>{{id}}</th>
+            <td>{{title}}</td>
+            <td><a href=""><i class="fa-solid fa-pen-to-square"></i></a><a href=""><i class="fa-regular fa-square-minus"></i></a></td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </section>
+  </div>
+</main>
